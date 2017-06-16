@@ -1,0 +1,51 @@
+ETL
+E:
+   1. creates a staging table
+   2. calls bulk insert stored procedure
+   3. archives the file 
+
+L:
+    * keep this straightforward 
+    * stick to 1 methodology for loading 
+    * migrating data for 1 table to another. Can verify there arent overlapping dates
+
+T:
+    * Data validation at the beginning. Dont wait until the end
+        (If the data is bad, send it back to the data vendor)
+
+    * Re-sizing a VARCHAR(MAX) 
+        - auto resizing column length
+        - File -> Staging -> Final
+
+Primary Key: `defines a unique characteristic of value of a particular row. What makes that row stand out because of this value. CANNOT have nulls'
+
+auto schema:
+    star:
+        * save space by extracting repeated info as id in derivative table 
+        * I.E. Sales ppl as central, and transactions as derivative    
+        * Stored Procedure that accepts a table name. Automatically derives a star schema
+            * trick (Heuristic): < 100 values can auto create derived value with id & name
+    snowflake:
+        * other tables link to more
+    
+wrapped exceptions
+data recon:    
+    * can use simple heuristics:
+        * what % of lines match the file header (character count, comma count, quote count, etc.)
+    * can run before upload to handle exceptions or write to seperate file
+
+bad data:
+    focus on the logic
+    excel: 
+        * general policy is to not accept excel data from vendors (data gets put in quotes) 
+         * People can write columns all over the place
+
+
+ETL Architecture:
+    * suggestion have a ETL server that loads data into a production server
+    * ETL server (loading servers) should have as much memory and storage as possible; long-term after data is loaded you should archive
+        *   
+    * recommend build a db solely for backing up (nothing on it) 
+    * Big Data:
+        - preconfigure how to split up data
+

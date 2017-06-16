@@ -1,0 +1,29 @@
+* First Brainstorm exhaustively
+* Organize
+    * obvious themes into tables. Create a primary key     
+        * recommended to auto-generate primary key
+* elimanate redudancy 
+    * (3rd codd normal form) 3cnf -> removes redudancy, while still maintaining usability
+    * ask 1 simple queston, can one employeeID have more than one job title      
+        * Can this ID have more than 1 field name!
+
+* assign relationships  
+    * 1to1, 1tomany, many_to_many(bad) 
+        * the way to get around a many to many is an intermediate table
+    
+* why "wide" tables / adding another column is a bad design:
+    *  have to query for multiple columns 
+    *  need to keep adding columns instead of rows (have to modify table design to grow system, yikes)
+
+Within a system one often has primary tables such as Customers, Employees, Products, Services
+    Drives the linking of ancillary tables
+ 
+* 'I try not to delete data. I will append inactive field instead'
+
+Design Rules:
+    * lookup tables can constrain values
+    * dont include spaces in field names
+    * break out field names to lowest common denominator 
+        * - i.e. last_name, first_name, middle_name instead of name. 
+            * to be able to sort and query against different parts
+
