@@ -26,4 +26,24 @@ Report(s):
             
 
     
-    
+Features 
+    Formula Fields: 
+        * creating formulas within a column
+        * cannot becreated within tabular reports. -> add formula apprears top left    
+            * better to go with `all summary` to have a superset of info. (similar to summarize within dplyr after group by)
+        * lives within a report
+    Bucket Feilds: 
+        * allow you to bucket a set of data or range of data togetehr
+        * Allow conditionals of columns / fields. Will crete a new field. 
+    Report Types:
+        * setup -> report type (search) -> click report types -> create new custoemr report type
+    Visibility of Reports:
+        * decided from folder ( not report itself) 
+            * click on blue tack icon. Can give read, write, modify access 
+            * If you share with maanger you automatically share those that they manage o
+    Schedule:
+       within `run report` dropdown -> schedule. (dont have access)
+    Export:
+        `Export Details` -> csv or excel    
+     
+       
