@@ -1,0 +1,30 @@
+List Views:
+    * Create a view for a specific set of records. I.E. Accounts, Opportunities, 
+    * I.E. Opportunities within Chicago, Contacts whos last name is Smith
+    * mass e-mail potentional also 
+    * 4 Key differences between reports:
+        1. Reports allow calculating, groupoing, summarising of data. List_Views = No
+        2. List views can edit data on the fly. (Enhanced In-Line editing). Reports = No
+        3. Reports can schedule e-mail to to be sent. 
+        4. Reports can be exports to excel & csv
+        * Why use List Views?
+            1. Referring to data frequently
+            2. Edit data on the fly (can update multiple records simultaneously)
+
+    * Creating / Modifying List Views
+        * After clicking `Accounts` -> Create New View 
+        * can edit: Baically anything 
+            * `,` -> OR
+            `add filter logic` -> `1 OR 2` 
+    * Enable in-line editing:
+        * Setup (top right) -> type "interface" -> click User Interface -> `Enable Inline Editing`, `Enable enhanced lists`
+            * Can now edit each field. Can click on a few and change multiple records at same time
+        * cannot have filter logic with editable list views when record type is set. If you haev a record type make sure both listviews are enabled
+    * Mass e-mails from list_views:
+        * mass e-mail list_views are different from regular list views. Needs to be created from `Contact`
+        * creating e-mail template -> seetting -> `communication` search -> <select email template>
+        * Contacts -> Mass e-mail Contacts -> <Select View> -> will have e-mail templates
+        * If you havea  contact w/o e-mail. They wont appear on contact e-mail list
+        * Can merge in fields. Will create a link to copy and paste for dyanmic content 
+        
+
