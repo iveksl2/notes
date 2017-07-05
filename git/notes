@@ -1,0 +1,4 @@
+# How to squash github commits:
+    * `git rebase -i HEAD~10` (have access to last 10 commits)
+    * opens up rebase screen. `s` -> squash 
+
