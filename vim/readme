@@ -1,0 +1,3 @@
+* How to back tab in vim?
+    insert mode: `Ctrl` + `d`
+                
