@@ -1,4 +1,7 @@
 # How to squash github commits:
     * `git rebase -i HEAD~10` (have access to last 10 commits)
     * opens up rebase screen. `s` -> squash 
-
+# How to remove large files from repository history 
+    * `git rm --cached giant_file` # Stage our giant file for removal, but leave it on disk 
+    * `git commit --amend -CHEAD ` # Amend the previous commit with your change. Simply making a new commit won't work, as you need, to remove the file from the unpushed history as well 
+    * `git push` # Push our rewritten, smaller commit
