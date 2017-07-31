@@ -1,0 +1,34 @@
+* simultaneous update theta0, theta1, etc. based upon the partial derivative
+* alpha (learning rate) tradeoff:
+    * too small -> takes a long time
+    * too big -> can fail to converg & diverge 
+* as we approach local minimum algorithim will automatically take smaller steps. At minimum theta will remain unchanged    
+    
+
+Gradient descent for linear regression
+
+partial_deriv: 1/2m * summation(H0(xi) - yi) ^ 2
+partial_deriv: 1/2m * summation(theta0 + theta1xi - yi) ^ 2
+
+theta0 result: 1/m sum(h0xi - yi)
+theta1 result: 1/m sum(h0xi - yi)*xi
+
+linear regression will always have a 'bowl-shaped' convex function: 
+    * will always converge to global optima
+
+otherwise known as batch because were computing over all training example. The entire 'batch'
+
+can use normal equations method from linear algebra, but GD scales better to larger data
+
+practical tips:
+    * feature scaling (normalization) can help GD converge faster. (cantours become less skewed / eliptical)
+    * plot J(theta) as a function of No. of iterations 
+        * J(theta) should decrease after every iteration
+        * ^ can use this to choose a learning rate as well
+        * To those alphatry .001, .003, .01, .03, .1, 1. Find one that is too larget and one that is too small
+    
+
+        
+
+
+
