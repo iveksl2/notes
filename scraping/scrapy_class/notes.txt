@@ -1,0 +1,89 @@
+Installation
+    pip install Scrapy
+
+scrapy startproject quotes_spider
+scrapy genspider quotes quotes.toscrape.com
+
+# ----- scrapy shell ----
+fetch('http://quotes.toscrape.com/')
+
+response.css      
+
+response.css('h1::text')
+
+# xpaths are more robust. They get transformed into css selectors under the hood 
+# go to first instance and right click inspect
+response.xpath('h1')
+
+# first item
+response.xpath('//h1/a')
+response.xpath('//h1/a/text()').extract()
+response.xpath('//h1/a/text()').extract_first()
+
+response.xpath('//*[@class=""]')
+response.xpath('//*[@id=""]')
+
+response.xpath('//*[@class="tag-item"]/a/text()').extract()
+
+# - from scrapy terminal
+scrapy list
+scrapy crawl quotes
+
+# ---- XPATH ----------
+# selecting notes from an html document
+
+from scrapy.selector import Selector
+
+sel  = Selector(text=html_doc)
+sel.extract()
+
+sel.xpath('/html/head/title').extract()
+
+# select all with double slashes
+sel.xpath('//title').extract()
+sel.xpath('//text()').extract()
+
+sel.xpath('/html/body/p').extract()
+sel.xpath('//p').extract()
+
+sel.xpath('//p[1]').extract() # xpath starts with 1
+sel.xpath('//p')[0].extract() # python is zero indexed
+
+sel.xpath('//p/text()')[0].extract() # python is zero indexed
+sel.xpath('//p/text()').extract_first() # python is zero indexed
+
+sel.xpath('//h2/a/@href').extract() # @ is an attribute
+
+sel.css('h2') # selects css
+
+quote.xpath('.//a') # to search only this portion
+
+# outputing scrapped data (need to be in yield statements)
+scrapy crawl quotes -o items.csv
+scrapy crawl quotes -o items.json
+scrapy crawl quotes -o items.xml
+
+# Scrapy architecture
+__init__.py <- ptyhon packages on disk
+items.py <- define how you want the yield behavior. Can get more readible 
+pipilines.py <- recieving an item and if pipeline should continue        
+    if item['h1_tag'] = item['h1_tag'].upper()
+    need to enable pipelins in settings.py
+settings.py <- 
+    robotstxt_obey = False
+    Download_Delya = 3 # delay each request 3 seconds
+
+# ----------- Books Scraping example --------
+scrapy startproject books_crawler
+
+# scrapy genspider example example.com
+scrapy genspider books books.toscrape.com
+
+# Can use selenium for javascript heavy webpage, but it will take a long time
+
+# --- Scapy arguments -----
+
+# ----- Tables ------
+* tip: try to isolate rows
+
+
