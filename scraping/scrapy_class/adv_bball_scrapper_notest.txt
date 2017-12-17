@@ -1,0 +1,6 @@
+response.url
+Out[24]: 'https://www.basketball-reference.com/teams/LAL/2018.html'
+
+response.xpath('//div[@id="all_advanced"]')
+
+
