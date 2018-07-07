@@ -1,0 +1,64 @@
+MIT Class Notes: http://introtodeeplearning.com/
+
+* number represents the darkness of the pixel
+* Color:
+        Each matrix is how Red, Blue & Green it is
+        Stack of 3 matricies
+
+  Tensor is like a matrix but can have any numbrer of dimensions
+
+  Convulation is a small tensor that can be multiplied over the main image 
+    * Also called filters  
+    * numeric value determines what is detected
+
+* The reason we introduce a non-linear activiation function is to be able to create non-linear decision boundries. Otherwise its a linear combination of components no matter how complex the network is. The world is non-linear!  
+* Typically we don't control / enforce the hidden units. Just inputs and outputs
+
+Single neural network: Weight vector, to nodes add a bias and apply a non-linearity 
+
+Sequence Models:
+    Reason why a different architecture is necessary:
+    * Variable length input when predicting the next word. 
+    * Bag of words -> problem is we loose sequential ordered information
+        * i.e. "The food was good, not bat at all" vs "the food was bad, not good at all"
+    
+    We want to preserve order and not cut it off to preserve memory
+
+    Recurrent neural networks to the rescue
+        loops over itself to factor in its own previous state
+        Cell state can preserve memory by encompassing information from all the cell states
+        
+    How do you train it?
+        Backpropogation with an additional time dimension
+            Total gradiant is the sum of the gradient at every time step
+
+        In practice they are difficult to train
+
+    Gated Cell
+        Keep memory within the cell state for longer dependencies 
+
+    Machine translation:
+Machine Vision:        
+    Can use patches of the image to train the NN. Use a sliding window
+    Weight the connection 
+    Apply a filter, weights to extract features 
+        
+    This Patchy operation is known as a convolution
+    IMPORTANT: Each neuran in a hidden layer only sees a patch of its inputs in CNN
+
+Deep Generative Models:
+    AutoRegressive models
+    Latent Variable models:
+        Variational auto encoders
+        general adversarial networks
+
+    Variational auto-encoders:Universi
+
+Universal APproximation Theorem:
+    * A feedforward neetwork with a single layer is sufficient to approximate, to an arbitrary precision, any coninuous function
+    * This drove a false before AI winter #2 
+    * 
+
+    
+    
+
