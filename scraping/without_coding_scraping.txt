@@ -1,0 +1,43 @@
+Chrome Dev extension shortcut: option + shift + i
+
+Basic HTML review:
+ol - ordered list
+ul - unordered list
+    li - list items
+
+Examples of void/empty elements: (element doesn't need a closing tag, has no children, or elements nested within it)
+Image:
+    attributes: src, height, width, alt (description)
+
+Table
+    tr - table rows
+    td - table data - smallest unit of measurement similar to a cell in a spreadsheet
+    th - table headers
+
+div - content division. Grouping mechanism. These are nestable       
+CSS - cascading style sheets. I.e. Class="red-text"
+        * can assign to different types of elements
+        * can assign multiple classes to a single html element. i.e. Class='red-text large-text'
+        * can be common elements to scrape
+
+id - can uniquely identify an element as an attribute. Can target these for web-scraping
+
+    
+Scraping:
+    Site Map
+    
+Portia:
+    1 Spider per website typically
+        1 or more sample pages
+    run a job
+
+    
+    
+
+
+
+        
+
+    
+
+
