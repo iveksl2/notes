@@ -1,0 +1,10 @@
+# Pandas Basics
+  * df = pd.read_csv('path/to/csv.csv', na_values = 'NAN', parse_dates = ['date_column_name']) # na_values & parse_dates passed
+  # Excel Import 
+    * pd.read_excel(file, sheetname = 0)
+    * pd.read_excel(file, sheetname = 'amex')
+    * pd.read_excel(file, sheetname = ['amex', 'nasdaq'], na_values = 'n/a') # Will be a dictionary of dataframes
+    
+    xls = pd.ExcelFiles('listings.xlsx')
+    exchanges = xls.sheet_names
+
