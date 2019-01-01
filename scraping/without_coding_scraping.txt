@@ -31,13 +31,28 @@ Portia:
         1 or more sample pages
     run a job
 
+XPath:
+    xpath = '/html/body/div[2]' <- brackets indiciate the element
+    '//' <- look forward all generations rather than just the first. Can do subsequently i.e. '/html/body/div[2]//table'
+    xpath = '//span[@class="span-class"]'
+    * <- wildcard
+    contains(@attri-name, "String-expr") 
+
     
-    
-
-
-
+Scrapy:
+    Setting up a selector:
+    from scrapy import selector 
         
-
+    Selecting Selectors - can chain them together 
+        * will return xpath elements in a list
+        xpath call: 
+        
+        
+    CSS Locators:
+        xpath /html/body/div
+        css locator: html > body > div
+             
+    Response Objects -> keeps track of the url it was generated from. 'Genereizable'                
     
-
+Follow ->     
 
