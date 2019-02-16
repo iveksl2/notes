@@ -1,0 +1,52 @@
+David Silver Lecture 1
+
+s - state
+a - action
+R - Reward
+Y - Discount
+    
+V(S) = max_a(R(s,a) + YV(s'))
+
+Markov Process / property:  Depends on where you are now, now how you got there. 
+                           * The future is independent of the past given the present"
+
+MDP: 
+    * different than markov process, provides a mathematical frameowrk in modeling decision making in situations where outcomes are partly random and partly under control of a decision maker.
+    * Expands on the bellman equation 
+
+
+policies vs plans
+    Policy - map of state to action. Can be deterministic or not
+        Like a gameplane of how to traverse a maze. The arrows
+    
+Value function - 
+    * prediction of future reward
+    * the reward of square of each block
+
+Model - predicts what the environemtn will do next
+
+Q - Learning Intuition
+    * Rather than the value of the state, what is the 'quality'; Further quantification layer -> Q value     
+    * Gets rid of the recursive V from the base formula
+
+Actor critic 
+    * Stores the policy
+    * Value Function
+
+Learning and Planning
+    * reinforcment learning problem
+        * The environment is unknown
+        * Interacts witht eh environement
+    * Planning
+        *  A model of the environment is known
+        * Agent performs computations with its model. -> Given an oracle model
+            * Agent improves its policy
+                
+   * Explorations finds more inforation about the environment   
+   * Exploitation exploits known information to maximise reward
+    
+    * Prediction: 
+        Evaluate the future given a policy
+    * Control: optimise the future
+        Find the best polic
+    
